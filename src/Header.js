@@ -1,11 +1,11 @@
 function Header() {
     return (
         <nav>
-            <li>
-                <a href="/">Main</a>
-                <a href="/about">About</a>
-                <a href="/users">Users</a>
-            </li>    
+            <ul>
+              <li><a href="/">Main</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/users">Users</a></li>
+            </ul>    
         </nav>
     );
   }
