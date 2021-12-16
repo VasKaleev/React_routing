@@ -1,4 +1,5 @@
-//import './App.css';
+import './App.css';
+import React from "react";
 import Main from "./Main";
 import Header from "./Header";
 import About from "./About";
@@ -9,14 +10,16 @@ import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 function App() {
   return (
-      <>
-     <Header/> 
+      <div>
+        <Header />
       <Router>
-       {/*  <nav>
-          <li><Link to="/">Main</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/users">Users</Link></li>
-        </nav>   */}
+        <nav className="nav">
+         <ul> 
+            <li><Link to="/">Главная</Link></li>
+            <li><Link to="/about">О программе</Link></li>
+            <li><Link to="/users">Пользователи</Link></li>
+          </ul>
+        </nav>  
         <Switch>
           <Route exact path="/" component={Main} />
           <Route path="/about" component={About} />
@@ -25,7 +28,7 @@ function App() {
           <Route component={Error} />
         </Switch>  
       </Router>
-      </>  
+      </div>  
   );
 }
 
